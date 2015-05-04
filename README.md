@@ -5,11 +5,11 @@ Links
 
 Linux Mint [HexLogin] :- http://linuxmint-art.org/content/show.php/HexLogin?content=168771
 
-Linux Mint [HexLogin] :- http://linuxmint-art.org/content/show.php/SuperLogin?content=168772
+Linux Mint [SuperLogin] :- http://linuxmint-art.org/content/show.php/SuperLogin?content=168772
 
 Gnome look [HexLogin] :- http://gnome-look.org/content/show.php/HexLogin?content=169840
 
-Gnome look [HexLogin] :- http://gnome-look.org/content/show.php/super+login?content=169841
+Gnome look [SuperLogin] :- http://gnome-look.org/content/show.php/super+login?content=169841
 
 
 
