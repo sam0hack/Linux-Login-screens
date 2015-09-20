@@ -48,8 +48,10 @@ The origin of the genus name Chrysaora lies in Greek mythology with Chrysaor,bro
 ![Image of Chrysaora jellyfish](https://pbs.twimg.com/media/CPN6qOvWcAAj1UQ.png)
 
 
-[Download Chrysaora jellyfish !](https://github.com/codex8/Linux-GDM-Login-screens/blob/master/Builds/jellyfish.tar.gz?raw=true)
+[Simulator video](https://www.youtube.com/watch?v=5R2gBxvjNqs)
 
+
+[Download Chrysaora jellyfish !](https://github.com/codex8/Linux-GDM-Login-screens/blob/master/Builds/jellyfish.tar.gz?raw=true)
 
 
 
@@ -57,12 +59,12 @@ The origin of the genus name Chrysaora lies in Greek mythology with Chrysaor,bro
 
 #####Links
 =====
-Linux Mint [HexLogin] :- http://linuxmint-art.org/content/show.php/HexLogin?content=168771
 
-Linux Mint [SuperLogin] :- http://linuxmint-art.org/content/show.php/SuperLogin?content=168772
+[linux mint [hexlogin]](http://linuxmint-art.org/content/show.php/HexLogin?content=168771)
 
-Gnome look [HexLogin] :- http://gnome-look.org/content/show.php/HexLogin?content=169840
-
-Gnome look [SuperLogin] :- http://gnome-look.org/content/show.php/super+login?content=169841
+[linux mint [hexlogin]](http://linuxmint-art.org/content/show.php/SuperLogin?content=168772)
 
 
+[Gnome look [HexLogin]]  (http://gnome-look.org/content/show.php/HexLogin?content=169840)
+
+[Gnome look [SuperLogin]] (http://gnome-look.org/content/show.php/super+login?content=169841)
