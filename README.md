@@ -51,7 +51,7 @@ The origin of the genus name Chrysaora lies in Greek mythology with Chrysaor,bro
 [Simulator video](https://www.youtube.com/watch?v=5R2gBxvjNqs)
 
 
-Download comming soon
+Download coming soon
 
 
 
