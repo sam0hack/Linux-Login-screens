@@ -51,8 +51,7 @@ The origin of the genus name Chrysaora lies in Greek mythology with Chrysaor,bro
 [Simulator video](https://www.youtube.com/watch?v=5R2gBxvjNqs)
 
 
-[Download Chrysaora jellyfish !](https://github.com/codex8/Linux-GDM-Login-screens/blob/master/Builds/jellyfish.tar.gz?raw=true)
-
+Download coming soon
 
 
 
