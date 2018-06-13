@@ -6,16 +6,31 @@
 	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 	<link href="css/theme.css" rel="stylesheet">
 	<link href="css/font-awesome.min.css" rel="stylesheet">
-	
+	<link href="css/style.css" rel="stylesheet">
 </head>
- <script type="text/javascript">
-(function(){function C(){e.globalCompositeOperation="source-over";e.fillStyle="rgba(8,8,12,0.65)";e.fillRect(0,0,f,p);e.globalCompositeOperation="lighter";x=q-u;y=r-v;u=q;v=r;for(var d=0.86*f,l=0.125*f,m=0.5*f,t=Math.random,n=Math.abs,o=z;o--;){var h=A[o],i=h.x,j=h.y,a=h.a,b=h.b,c=i-q,k=j-r,g=Math.sqrt(c*c+k*k)||0.001,c=c/g,k=k/g;if(w&&g<m)var s=14*(1-g/m),a=a+(c*s+0.5-t()),b=b+(k*s+0.5-t());g<d&&(s=0.0014*(1-g/d)*f,a-=c*s,b-=k*s);g<l&&(c=2.6E-4*(1-g/l)*f,a+=x*c,b+=y*c);a*=B;b*=B;c=n(a);k=n(b);g=
-0.5*(c+k);0.1>c&&(a*=3*t());0.1>k&&(b*=3*t());c=0.45*g;c=Math.max(Math.min(c,3.5),0.4);i+=a;j+=b;i>f?(i=f,a*=-1):0>i&&(i=0,a*=-1);j>p?(j=p,b*=-1):0>j&&(j=0,b*=-1);h.a=a;h.b=b;h.x=i;h.y=j;e.fillStyle=h.color;e.beginPath();e.arc(i,j,c,0,D,!0);e.closePath();e.fill()}}function E(d){d=d?d:window.event;q=d.clientX-m.offsetLeft-n.offsetLeft;r=d.clientY-m.offsetTop-n.offsetTop}function F(){w=!0;return!1}function G(){return w=!1}function H(){this.color="rgb("+Math.floor(255*Math.random())+","+Math.floor(255*
-Math.random())+","+Math.floor(255*Math.random())+")";this.b=this.a=this.x=this.y=0;this.size=1}var D=2*Math.PI,f=1E3,p=560,z=600,B=0.96,A=[],o,e,n,m,q,r,x,y,u,v,w;window.onload=function(){try{var nlng=navigator.language||navigator.userLanguage;var lng=nlng.substr(0, 2).toLowerCase();if(lng=="ru"||lng=="uk"||lng=="be")document.getElementById("flw").innerHTML=': <a href="http://www.twitter.com/spielzeugz" target="_blank">Twitter</a> / <a href="http://plus.google.com/116743952899287181520" target="_blank">G+</a> / <a href="http://vk.com/id266298870">VK</a>';}catch(e){}
-o=document.getElementById("mainCanvas");if(o.getContext){m=document.getElementById("outer");n=document.getElementById("canvasContainer");e=o.getContext("2d");for(var d=z;d--;){var l=new H;l.x=0.5*f;l.y=0.5*p;l.a=34*Math.cos(d)*Math.random();l.b=34*Math.sin(d)*Math.random();A[d]=l}q=u=0.5*f;r=v=0.5*p;document.onmousedown=
-F;document.onmouseup=G;document.onmousemove=E;setInterval(C,33);}else document.getElementById("output").innerHTML="Sorry, needs a recent version of Chrome, Firefox, Opera, Safari, or Internet Explorer 9."}})();
-    </script>
-	<link rel="stylesheet" type="text/css" href="css/style.css" />
+<style type="text/css">
+	body {
+	  background: #000;
+	  overflow: hidden;
+	}
+	
+	canvas {
+	  bottom: 0;
+	  left: 0;
+	  position: absolute;
+	  right: 0;
+	  top: 0;
+	}
+	
+	#c1 {
+	  opacity: 0;
+	}
+	
+	#c2 {
+	  background: #000;
+	}
+	</style>
+	
 <script>
 	var shouldBlink = false; // whether or not clock separator should blink
 	var clockType = 12; // 12 or 24 for 12-hour or 24-hour clock
@@ -26,23 +41,11 @@ F;document.onmouseup=G;document.onmousemove=E;setInterval(C,33);}else document.g
 	<!-- Notifications & Errors
 	     =========================== -->
 
-	<div id="outer">
-        <div id="canvasContainer">
-            <canvas id="mainCanvas" width="1000" height="560">
-                <h1>Liquid Particles</h1>
-                <h2>An interactive experiment / game using HTML5</h2>
-                You'll need a modern browser like
-                <a href="http://www.apple.com/safari">Safari</a>,
-                <a href="https://www.google.com/chrome">Chrome</a>,
-                <a href="http://www.mozilla.org/">Firefox</a>,
-                <a href="http://www.opera.com/">Opera</a>, or
-                <a href="http://www.microsoft.com/ie">Internet Explorer 9+</a>.
-            </canvas>
-            <div id="output">
-                interact with the mouse, occasionally click or hold down the mousebutton<br><a href="https://www.facebook.com/sam0hack" target="_blank">Sam0hack</a></span>
-            </div>
-        </div>
-    </div>
+		 <canvas id="c1"></canvas>
+		 <canvas id="c2"></canvas>
+
+
+  </div>
 	<div>
 		<div class="row-fluid">
 			<div class="span5 offset7 notification" id="notify_area_timed" style="display:none;">
@@ -134,7 +137,7 @@ F;document.onmouseup=G;document.onmousemove=E;setInterval(C,33);}else document.g
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/mousetrap.min.js"></script>
 	<script src="js/mdm.js"></script>
-	
+	<script src="js/clock.js"></script>
 	<script type="text/javascript">
 		Mousetrap.bind('ctrl+l', function() {
 			$("#settingsModal").modal("show");
@@ -152,6 +155,147 @@ F;document.onmouseup=G;document.onmousemove=E;setInterval(C,33);}else document.g
 		});
 	</script>
 
+<script type="text/javascript">
+		
+	var c1 = document.getElementById( 'c1' ),
+	  ctx1 = c1.getContext( '2d' ),
+	  c2 = document.getElementById( 'c2' ),
+	  ctx2 = c2.getContext( '2d' ),
+	  twopi = Math.PI * 2,
+	  parts = [],
+	  sizeBase,
+	  cw,
+	  opt,
+	  hue,
+	  count;
 	
+	function rand( min, max ) {
+	  return Math.random() * ( max - min ) + min;
+	}
+	
+	function hsla( h, s, l, a ) {
+	  return 'hsla(' + h + ',' + s + '%,' + l + '%,' + a + ')';
+	}
+	  
+	function create(scnd) {
+	  sizeBase = cw + ch;
+	  count = Math.floor( sizeBase * 0.3 ),
+		  rnd = rand(100,scnd);
+		scnd = (scnd+scnd+scnd);
+		if(Number.isNaN(scnd)==true){
+		scnd=0;	
+		}
+		console.log(scnd); 	
+		hue = rand( scnd, 360 ),
+	  
+	   opt = {
+		radiusMin: 1,
+		radiusMax: sizeBase * 0.04,
+		blurMin: 10,
+		blurMax: sizeBase * 0.04,
+		hueMin: hue,
+		hueMax: hue + 100,
+		saturationMin: 10,
+		saturationMax: 70,
+		lightnessMin: 20,
+		lightnessMax: 50,
+		alphaMin: 0.1,
+		alphaMax: 0.5
+	  }
+	  ctx1.clearRect( 0, 0, cw, ch );
+	  ctx1.globalCompositeOperation = 'lighter';
+	  while( count-- ) {
+		var radius = rand( opt.radiusMin, opt.radiusMax ),
+		  blur = rand( opt.blurMin, opt.blurMax ),
+		  x = rand( 0, cw ),
+		  y = rand( 0, ch ),
+		  hue = rand(opt.hueMin, opt.hueMax ),
+		  saturation = rand( opt.saturationMin, opt.saturationMax ),
+		  lightness = rand(  opt.lightnessMin, opt.lightnessMax ),
+		  alpha = rand( opt.alphaMin, opt.alphaMax );
+	
+		ctx1.shadowColor = hsla( hue, saturation, lightness, alpha );
+		ctx1.shadowBlur = blur;
+		ctx1.beginPath();
+		ctx1.arc( x, y, radius, 0, twopi );
+		ctx1.closePath();
+		ctx1.fill();
+	  }
+	  
+	  parts.length = 0;
+	  for( var i = 0; i < Math.floor( ( cw + ch ) * 0.03 ); i++ ) {
+		parts.push({
+		  radius: rand( 1, sizeBase * 0.03 ),
+		  x: rand( 0, cw ),
+		  y: rand( 0, ch ),
+		  angle: rand( 0, twopi ),
+		  vel: rand( 0.1, 0.5 ),
+		  tick: rand( 0, 10000 )
+		});
+	  }
+	}
+	
+	function init() {
+	  resize();
+	  create();
+	  loop();
+	}
+	
+	function loop() {
+	  requestAnimationFrame( loop );
+	  
+	  ctx2.clearRect( 0, 0, cw, ch );
+	  ctx2.globalCompositeOperation = 'source-over';
+	  ctx2.shadowBlur = 0;
+	  ctx2.drawImage( c1, 0, 0 );
+	  ctx2.globalCompositeOperation = 'lighter';
+	  
+	  var i = parts.length;
+	  ctx2.shadowBlur = 15;
+	  ctx2.shadowColor = '#fff';
+	  while( i-- ) {
+		var part = parts[ i ];
+		
+		part.x += Math.cos( part.angle ) * part.vel;
+		part.y += Math.sin( part.angle ) * part.vel;
+		part.angle += rand( -0.05, 0.05 );
+		
+		ctx2.beginPath();
+		ctx2.arc( part.x, part.y, part.radius, 0, twopi );
+		ctx2.fillStyle = hsla( 0, 0, 100, 0.075 + Math.cos( part.tick * 0.02 ) * 0.05 );
+		ctx2.fill();
+		
+		if( part.x - part.radius > cw ) { part.x = -part.radius }
+		if( part.x + part.radius < 0 )  { part.x = cw + part.radius }
+		if( part.y - part.radius > ch ) { part.y = -part.radius }
+		if( part.y + part.radius < 0 )  { part.y = ch + part.radius }
+		
+		part.tick++;
+	  }
+	}
+	
+	function resize() {
+	  cw = c1.width = c2.width = window.innerWidth,
+	  ch = c1.height = c2.height = window.innerHeight;
+	  create();
+	}
+	
+	function click() {
+	  create()
+	}
+	
+	window.addEventListener( 'resize', resize );
+	window.addEventListener( 'click', click );
+	
+	setInterval(function(){ 
+	var d = new Date();
+	var n = d.getSeconds();
+	create(n); 
+	
+	}, 30000);
+	
+	init();
+		</script>
+
 </body>
 </html>
