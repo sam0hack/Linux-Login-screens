@@ -67,3 +67,26 @@ The origin of the genus name Chrysaora lies in Greek mythology with Chrysaor,bro
 [Gnome look [HexLogin]]  (http://gnome-look.org/content/show.php/HexLogin?content=169840)
 
 [Gnome look [SuperLogin]] (http://gnome-look.org/content/show.php/super+login?content=169841)
+
+## Steps to Contribute
+
+1. Fork the repository
+
+2. Clone your forked repository using terminal or gitbash.
+
+```
+git clone <link-of-repos>
+```
+
+3. Make changes to the cloned repos
+
+4. Run the following three commands 
+
+```
+git add .
+git commit -m "Your-msg-here"
+git push origin master
+```
+
+5. Then in github , in your cloned repository find the option to make a pull request
+
